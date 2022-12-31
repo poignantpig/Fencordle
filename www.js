@@ -151,5 +151,5 @@ function play() {
 }
 
 function copy_result() {
-    navigator.clipboard.writeText(`Fencordle #${day} ${answered ? guesses.length: '*'}/10\n\n` + guesses.join('\n') + '\n\nhttps://fencordle.com')
+    navigator.clipboard.writeText(`Fencordle #${day} ${answered ? guesses.length: '*'}/10\n\n` + guesses.join('\n') + '\n\nhttps://poignantpig.github.io/Fencordle')
 }
