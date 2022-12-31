@@ -102,32 +102,54 @@ function play() {
 
         if (player[3]==answer[3]){
             html += `<img class=" border-green" src="assets/correct_icon.png">`
-            html += '  <h3 class = " green">' + player[3] + '</h3>'
+            html += '  <h3 class = " green">' + player[3] + '</h3><td>'
             guesss.push(129001)
         }
         else if(player[3]>answer[3]){
             html += `<img class=" border-yellow" src="assets/toohigh_icon.jpeg">`
             
-            html += '  <h3 class = " red">' + player[3] + '</h3>'
-            guesss.push(129001)
+            html += '  <h3 class = " red">' + player[3] + '</h3><td>'
+            guesss.push(0x2B1B)
         }
         else{
             html += `<img class=" border-yellow" src="assets/toolow_icon.png">`
-            html += '  <h3 class = " red">' + player[3] + '</h3>'
-            guesss.push(129001)
+            html += '  <h3 class = " red">' + player[3] + '</h3><td>'
+            guesss.push(0x2B1B)
         }
         guesss.push(32)
-        /* grip */
-        if (answer[4] == player[4]) {
-            html += `<td class=" green">${player[4]}</td>`
+
+        if (player[4]==answer[4]){
+            html += `<img class=" border-green" src="assets/correct_icon.png">`
+            html += '  <h3 class = " green">' + player[4] + '</h3>'
+            guesss.push(129001)
+        }
+        else if(player[4]>answer[4]){
+            html += `<img class=" border-yellow" src="assets/toohigh_icon.jpeg">`
+            
+            html += '  <h3 class = " red">' + player[4] + '</h3>'
+            guesss.push(0x2B1B)
+        }
+        else{
+            html += `<img class=" border-yellow" src="assets/toolow_icon.png">`
+            html += '  <h3 class = " red">' + player[4] + '</h3>'
+            guesss.push(0x2B1B)
+        }
+        guesss.push(32)
+        if (answer[5] == player[5]) {
+            html += `<td class=" green">${player[5]}</td>`
             guesss.push(129001) 
         }
         else {
-            html += `<td class=" red">${player[4]}</td>`
+            html += `<td class=" red">${player[5]}</td>`
             guesss.push(0x2B1B)
         }
-        html += "</tr>"
+        guesss.push(32)
+
+        
+  
+        
         document.getElementById('data').innerHTML += html
+        html+="\tr"
         guesses.push(String.fromCodePoint(...guesss))
 
         document.getElementById('timer').innerHTML = `${guesses.length}/10`

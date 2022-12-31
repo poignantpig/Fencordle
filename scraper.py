@@ -16,8 +16,11 @@ for i in range(len(dictionKeys)):
     x = df.iloc[i].tolist()
     x.pop(0)
     x[3] = int(x[3])
+    x[4] = int(x[4])
+    x.pop(6)
     setup[dictionKeys[i]]=x
     data["players"] = setup
     
+
 with open("fencers.json", "w") as fp:
     json.dump(data , fp) 

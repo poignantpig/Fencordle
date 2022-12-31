@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  margin: 40px auto !important;
+  margin: 50px auto !important;
   font-size: 125% !important;
   max-width: 650px !important;
 }
@@ -303,12 +303,13 @@ th {
 
 thead,
 tbody,
-td,
-th {
+th
+td{
   border-color: inherit;
   border-style: solid;
   border-width: 0;
 }
+
 
 button {
   border-radius: 0;
@@ -392,7 +393,7 @@ textarea {
 .container-fluid {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  width: 100%;
+  width: 150%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
