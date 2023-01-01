@@ -124,13 +124,14 @@ function play() {
             guesss.push(129001)
         }
         else if(player[4]>answer[4]){
-            html += `<img class=" border-yellow" src="assets/toohigh_icon.jpeg">`
+            html += `<img class=" border-yellow" src="assets/toolow_icon.png">`
             
             html += '  <h3 class = " red">' + player[4] + '</h3>'
             guesss.push(0x2B1B)
         }
         else{
-            html += `<img class=" border-yellow" src="assets/toolow_icon.png">`
+
+            html += `<img class=" border-yellow" src="assets/toohigh_icon.jpeg">`
             html += '  <h3 class = " red">' + player[4] + '</h3>'
             guesss.push(0x2B1B)
         }
