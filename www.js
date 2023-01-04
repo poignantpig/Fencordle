@@ -162,10 +162,10 @@ function play() {
             document.getElementById('name').disabled = true
             document.getElementById('submit').disabled = true
             if (guesses.length == 10 && player != answer){
-                document.getElementById('exampleModalLabel').innerHTML = `Nice try. The answer to today's Fencordle is ${answer[0]}.`
+                document.getElementById('exampleModalLabel').innerHTML = `Nice try. The answer to today's Swordle is ${answer[0]}.`
             }
             else {
-                document.getElementById('exampleModalLabel').innerHTML = `Good job, you guessed today's Fencordle!`               
+                document.getElementById('exampleModalLabel').innerHTML = `Good job, you guessed today's Swordle!`               
             }
             var modal = new bootstrap.Modal(document.getElementById('exampleModal'))
             modal.show()
@@ -174,5 +174,5 @@ function play() {
 }
 
 function copy_result() {
-    navigator.clipboard.writeText(`Fencordle #${day} ${answered ? guesses.length: '*'}/10\n\n` + guesses.join('\n') + '\n\nhttps://poignantpig.github.io/Fencordle')
+    navigator.clipboard.writeText(`Swordle #${day} ${answered ? guesses.length: '*'}/10\n\n` + guesses.join('\n') + '\n\nhttps://poignantpig.github.io/Swordle')
 }
