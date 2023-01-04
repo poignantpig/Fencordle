@@ -19,6 +19,11 @@ function helpToggle() {
     modal.show()
 }
 
+function archiveToggle() {
+    var modal = new bootstrap.Modal(document.getElementById('archive'))
+    modal.show()
+}
+
 function ready() {
     var sheet = window.document.styleSheets[0];
     width = document.getElementById('playername').offsetWidth;
@@ -172,6 +177,9 @@ function play() {
         }
     }
 }
+
+
+console.log(pastGuesses)
 
 function copy_result() {
     navigator.clipboard.writeText(`Swordle #${day} ${answered ? guesses.length: '*'}/10\n\n` + guesses.join('\n') + '\n\nhttps://poignantpig.github.io/Swordle')
