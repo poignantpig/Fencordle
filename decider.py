@@ -13,6 +13,7 @@ time.sleep(int(input()))
 
 while True:
     global settings
+    past_answers.append("\n" + settings['day'] + " " + settings['answer'])
     with open('fencers.json') as data:
         settings = json.load(data)
     settings['day'] += 1
@@ -20,7 +21,6 @@ while True:
     if answer in past_answers:
         continue
     settings['answer'] = answer
-    past_answers.append(answer)
     open('pastanswers.txt', 'a').write('\n'.join(past_answers))
     save_settings()
     print('New day; settings!', )
