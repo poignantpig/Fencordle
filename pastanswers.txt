@@ -21,3 +21,4 @@
 21 heinzer max
 22 tulen tristan
 23 gergely siklosi
+24 jurka jakub
