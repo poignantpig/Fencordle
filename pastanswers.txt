@@ -22,3 +22,4 @@
 22 tulen tristan
 23 gergely siklosi
 24 jurka jakub
+25 cuomo valerio
